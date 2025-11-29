@@ -7,7 +7,7 @@ RUN apt-get update && \
 		libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
 		libsqlite3-dev libffi-dev libxml2-dev libxslt1-dev \
 		libre2-dev pkg-config
-RUN pip3 install --no-binary lxml --upgrade git+https://github.com/nativeit-dev/grab-site
+RUN pip3 install --no-binary lxml --upgrade git+https://github.com/nativeit-dev/grab-site@dev-2025
 RUN apt-get purge -y \
 	git build-essential pkg-config && \
 	apt-get autoremove -y && apt-get clean && \
