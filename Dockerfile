@@ -2,10 +2,10 @@ FROM python:3-slim-trixie
 
 RUN apt-get update && \
 	apt-get install --no-install-recommends -y \
-		git build-essential \
+		git build-essential python3-chardet \
 		libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
 		libsqlite3-dev libffi-dev libxml2-dev libxslt1-dev \
-		libre2-dev pkg-config
+		libre2-dev libchardet1 libchardet-dev pkg-config
 RUN pip3 install --no-binary lxml --upgrade git+https://github.com/nativeit-dev/grab-site@dev-2025
 RUN apt-get purge -y \
 	git build-essential pkg-config && \
