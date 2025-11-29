@@ -1,8 +1,11 @@
 # Grab-Site Docker Container
-Simple containerized [grab-site](https://github.com/ArchiveTeam/grab-site).
+Simple containerized [grab-site](https://github.com/nativeit-dev/grab-site).
 
- - Webinterface will be exposed to **port 29000**
- - Grab'ed sites will be saved in **/data**
+ - Web interface will be exposed to **port 29000**
+ - Grabbed sites will be saved in **/data**
+
+## Windows Development Note
+This Docker container is the recommended way to run grab-site on Windows, as wpull's dependencies (particularly `html5-parser` and `cchardet`) require native compilation tools that are difficult to set up on Windows. The Linux container has all required build tools and compiles dependencies properly.
 
 ## Basic Usage
 Because our gs-server resides inside a docker container, grab-site must also be run inside the docker container. Rather than running `grab-site 'URL'`, you should run `docker exec grab-site-container grab-site 'URL'` so that `grab-site 'URL'` is ran inside the container.

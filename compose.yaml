@@ -8,4 +8,3 @@ services:
     volumes:
       - "D:\\dev\\usr\\share\\grab-site\\output:/data"
     restart: unless-stopped
-      - "D:\\dev\\usr\\share\\grab-site\\output:/data"
