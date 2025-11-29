@@ -1,0 +1,11 @@
+services:
+  grab-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "29000:29000"  # Web interface
+    volumes:
+      - "D:\\dev\\usr\\share\\grab-site\\output:/data"
+    restart: unless-stopped
+      - "D:\\dev\\usr\\share\\grab-site\\output:/data"
